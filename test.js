@@ -61,7 +61,8 @@ describe("workbox", () => {
             exclude: [
               /^build-manifest\.json$/i,
               /^react-loadable-manifest\.json$/i,
-              /.*\.js\.map/i,
+              /\/_error\.js$/i,
+              /\.js\.map$/i,
             ],
             modifyURLPrefix: { "static/": "/_next/static/" },
             swDest: `${dir}/public/sw.js`,
@@ -128,7 +129,8 @@ describe("workbox", () => {
             exclude: [
               /^build-manifest\.json$/i,
               /^react-loadable-manifest\.json$/i,
-              /.*\.js\.map/i,
+              /\/_error\.js$/i,
+              /\.js\.map$/i,
             ],
             modifyURLPrefix: { "static/": "/_next/static/" },
             swDest: `${dir}/public/sw.js`,
