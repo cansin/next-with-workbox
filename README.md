@@ -37,7 +37,15 @@ public/sw.js
 public/sw.js.map
 ```
 
-Register your service worker at `_app.js`:
+Create your service worker at `/path/to/your-next-app/worker.js`
+
+```js
+import { precacheAndRoute } from "workbox-precaching";
+
+precacheAndRoute(self.__WB_MANIFEST);
+```
+
+Register your service worker at `/path/to/your-next-app/pages/_app.js`:
 
 ```js
 import React, { useEffect } from "react";
