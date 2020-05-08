@@ -1,6 +1,8 @@
 # next-with-workbox
 
 Higher order Next.js config to generate a [Workbox service worker](https://developers.google.com/web/tools/workbox).
+It auto-magically sets up certain aspects like pre-caching `public` folder and cache busting exclusions in order
+to get the most out of Workbox with Next.js.
 Heavily inspired from [shadowwalker/next-pwa](https://github.com/shadowwalker/next-pwa).
 
 ![size](https://img.shields.io/bundlephobia/minzip/next-with-sourcemap.svg) ![dependencies](https://img.shields.io/david/cansin/next-with-workbox.svg) ![build](https://img.shields.io/travis/com/cansin/next-with-workbox) ![downloads](https://img.shields.io/npm/dt/next-with-workbox) ![license](https://img.shields.io/npm/l/next-with-workbox.svg)
@@ -35,6 +37,32 @@ public/sw.js
 public/sw.js.map
 ```
 
+Register your service worker at `_app.js`:
+
+```js
+import React, { useEffect } from "react";
+import { Workbox } from "workbox-window";
+
+function App({ Component, pageProps }) {
+  useEffect(() => {
+    if (
+      !("serviceWorker" in navigator) ||
+      process.env.NODE_ENV !== "production"
+    ) {
+      console.warn("Pwa support is disabled");
+      return;
+    }
+
+    const wb = new Workbox("sw.js", { scope: "/" });
+    wb.register();
+  }, []);
+
+  return <Component {...pageProps} />;
+}
+
+export default App;
+```
+
 ## Configuration
 
 There are options you can use to customize the behavior of this plugin
@@ -61,8 +89,8 @@ module.exports = withWorkbox({
   - defaults to `public`.
 - **swDest:** string - the destination file to write the service worker code to.
   - defaults to `sw.js`.
-- **swDest:** string - the input file to read the custom service worker code from. Settings this automatically
-switches to [InjectManifest](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest) plugin.
-If not set, [GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW) plugin
-is used.
+- **swSrc:** string - the input file to read the custom service worker code from. Settings this automatically
+  switches to [InjectManifest](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest) plugin.
+  If not set, [GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW) plugin
+  is used.
   - defaults to `false`.
