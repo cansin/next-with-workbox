@@ -5,7 +5,7 @@ It auto-magically sets up certain aspects like pre-caching `public` folder and c
 to get the most out of Workbox with Next.js.
 Heavily inspired from [shadowwalker/next-pwa](https://github.com/shadowwalker/next-pwa).
 
-![size](https://img.shields.io/bundlephobia/minzip/next-with-sourcemap.svg) ![dependencies](https://img.shields.io/david/cansin/next-with-workbox.svg) ![build](https://img.shields.io/travis/com/cansin/next-with-workbox) ![downloads](https://img.shields.io/npm/dt/next-with-workbox) ![license](https://img.shields.io/npm/l/next-with-workbox.svg)
+![size](https://img.shields.io/bundlephobia/minzip/next-with-workbox.svg) ![dependencies](https://img.shields.io/david/cansin/next-with-workbox.svg) ![build](https://img.shields.io/travis/com/cansin/next-with-workbox) ![downloads](https://img.shields.io/npm/dt/next-with-workbox) ![license](https://img.shields.io/npm/l/next-with-workbox.svg)
 
 ## Install
 
