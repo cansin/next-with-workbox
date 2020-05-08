@@ -97,7 +97,7 @@ module.exports = withWorkbox({
   - defaults to `public`.
 - **swDest:** string - the destination file to write the service worker code to.
   - defaults to `sw.js`.
-- **swSrc:** string - the input file to read the custom service worker code from. Settings this automatically
+- **swSrc:** string - the input file to read the custom service worker code from. Setting this 
   switches to [InjectManifest](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest) plugin.
   If not set, [GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW) plugin
   is used.
