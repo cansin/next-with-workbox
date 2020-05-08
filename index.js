@@ -25,6 +25,7 @@ function withWorkbox(nextConfig = {}) {
             dest = "public",
             dontCacheBustURLsMatching = false,
             exclude = [],
+            force = false,
             modifyURLPrefix = {},
             swDest = "sw.js",
             swSrc = false,
@@ -37,7 +38,7 @@ function withWorkbox(nextConfig = {}) {
         return config;
       }
 
-      if (dev) {
+      if (dev && !force) {
         console.log("> Progressive web app  is disabled");
         return config;
       }
@@ -63,8 +64,9 @@ function withWorkbox(nextConfig = {}) {
             )
           : defaultDontCacheBustURLsMatching,
         additionalManifestEntries: glob
-          .sync(`{,"**/*","!${swDest}","!${swDest}.map"}`, {
+          .sync("**/*", {
             cwd: dest,
+            nodir: true,
           })
           .map((f) => ({
             url: `/${f}`,
@@ -74,7 +76,8 @@ function withWorkbox(nextConfig = {}) {
         exclude: [
           /^build-manifest\.json$/i,
           /^react-loadable-manifest\.json$/i,
-          /.*\.js\.map/i,
+          /\/_error\.js$/i,
+          /\.js\.map$/i,
           ...exclude,
         ],
         modifyURLPrefix: {
