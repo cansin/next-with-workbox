@@ -20,7 +20,8 @@
     "webpack": "^4.43.0"
   },
   "peerDependencies": {
-    "workbox-window": ">=5"
+    "next": "^9.0.0",
+    "workbox-window": "^5.0.0"
   },
   "repository": {
     "type": "git",

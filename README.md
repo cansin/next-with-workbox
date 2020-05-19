@@ -1,11 +1,14 @@
 # next-with-workbox
+[![size](https://img.shields.io/bundlephobia/minzip/next-with-workbox)](https://bundlephobia.com/result?p=next-with-workbox)
+[![dependencies](https://img.shields.io/librariesio/release/npm/next-with-workbox)](https://libraries.io/npm/@next-with-workbox)
+[![build](https://img.shields.io/travis/com/cansin/next-with-workbox)](https://travis-ci.com/github/cansin/next-with-workbox)
+[![downloads](https://img.shields.io/npm/dm/next-with-workbox)](https://www.npmjs.com/package/next-with-workbox)
+[![license](https://img.shields.io/github/license/cansin/next-with-workbox)](https://github.com/cansin/next-with-workbox/blob/master/LICENSE)
 
 Higher order Next.js config to generate a [Workbox service worker](https://developers.google.com/web/tools/workbox).
 It auto-magically sets up certain aspects like pre-caching `public` folder and cache busting exclusions in order
 to get the most out of Workbox with Next.js.
 Heavily inspired from [shadowwalker/next-pwa](https://github.com/shadowwalker/next-pwa).
-
-![size](https://img.shields.io/bundlephobia/minzip/next-with-workbox.svg) ![dependencies](https://img.shields.io/david/cansin/next-with-workbox.svg) ![build](https://img.shields.io/travis/com/cansin/next-with-workbox) ![downloads](https://img.shields.io/npm/dt/next-with-workbox) ![license](https://img.shields.io/npm/l/next-with-workbox.svg)
 
 ## Install
 
