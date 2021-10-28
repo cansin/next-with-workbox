@@ -68,6 +68,7 @@ function withWorkbox(nextConfig = {}) {
             cwd: dest,
             nodir: true,
           })
+          .filter((f) => f.indexOf(swDest) !== 0)
           .map((f) => ({
             url: `/${f}`,
             revision: getRevision(`public/${f}`),
