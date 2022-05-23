@@ -39,13 +39,13 @@ function withWorkbox(nextConfig = {}) {
       }
 
       if (dev && !force) {
-        console.log("> Progressive web app  is disabled");
+        console.log("> Progressive Web App is disabled");
         return config;
       }
 
       const swDestPath = path.join(options.dir, dest, swDest);
 
-      console.log("> Compiling progressive web app");
+      console.log("> Progressive web app is enabled using Workbox");
       console.log(`> Service worker destination path: "${swDestPath}"`);
 
       config.plugins.push(
@@ -90,7 +90,7 @@ function withWorkbox(nextConfig = {}) {
       if (swSrc) {
         const swSrcPath = path.join(options.dir, swSrc);
         console.log(`> Service worker source path: "${swSrcPath}"`);
-        console.log('> Using "WorkboxPlugin.InjectManifest"');
+        console.log('> Using "WorkboxPlugin.InjectManifest" plugin');
         config.plugins.push(
           new WorkboxPlugin.InjectManifest({
             swSrc: swSrcPath,
@@ -99,7 +99,7 @@ function withWorkbox(nextConfig = {}) {
           })
         );
       } else {
-        console.log('> Using "WorkboxPlugin.GenerateSW"');
+        console.log('> Using "WorkboxPlugin.GenerateSW" plugin');
         config.plugins.push(
           new WorkboxPlugin.GenerateSW({
             ...defaultWorkboxOptions,
@@ -108,6 +108,7 @@ function withWorkbox(nextConfig = {}) {
         );
       }
 
+      console.log("> Progressive web app configuration complete");
       return config;
     },
   };

@@ -15,6 +15,8 @@ Heavily inspired from [shadowwalker/next-pwa](https://github.com/shadowwalker/ne
 
 ```bash
 npm install next-with-workbox --save
+# or
+yarn add next-with-workbox
 ```
 
 ## Basic Usage
