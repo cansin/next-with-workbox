@@ -1,0 +1,6 @@
+.eslintrc.json
+.github/
+.idea/
+babel.config.json
+node_modules/
+test.js
