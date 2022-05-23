@@ -1,32 +1,8 @@
 {
   "name": "next-with-workbox",
   "version": "2.0.1",
-  "description": "Higher order Next.js configuration for generating a service worker",
-  "main": "index.js",
   "private": false,
-  "dependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "glob": "^7.1.6",
-    "workbox-webpack-plugin": "^5.1.4"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.6.1",
-    "prettier": "^2.1.2",
-    "webpack": "^4.44.2"
-  },
-  "peerDependencies": {
-    "next": "^10.0.0",
-    "workbox-window": "^5.1.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cansin/next-with-workbox.git"
-  },
+  "description": "Higher order Next.js configuration for generating a service worker",
   "keywords": [
     "next.js",
     "workbox",
@@ -35,17 +11,45 @@
     "service-worker",
     "webpack"
   ],
+  "homepage": "https://github.com/cansin/next-with-workbox#readme",
+  "bugs": {
+    "url": "https://github.com/cansin/next-with-workbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cansin/next-with-workbox.git"
+  },
+  "license": "MIT",
   "author": {
     "name": "Cansin Yildiz",
     "email": "cansinyildiz@gmail.com",
     "url": "https://www.cansinyildiz.com/"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cansin/next-with-workbox/issues"
-  },
-  "homepage": "https://github.com/cansin/next-with-workbox#readme",
+  "main": "index.js",
   "scripts": {
     "test": "eslint . && jest"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "glob": "^8.0.3",
+    "workbox-webpack-plugin": "^6.5.3"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.18.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "webpack": "^5.72.1"
+  },
+  "peerDependencies": {
+    "next": ">=10",
+    "workbox-window": ">=5"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

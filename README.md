@@ -13,7 +13,7 @@ Heavily inspired from [shadowwalker/next-pwa](https://github.com/shadowwalker/ne
 ## Install
 
 ```bash
-yarn add next-with-workbox
+npm install next-with-workbox --save
 ```
 
 ## Basic Usage
