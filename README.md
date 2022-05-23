@@ -1,7 +1,8 @@
 # next-with-workbox
+[![tests](https://github.com/cansin/next-with-workbox/actions/workflows/tests.yml/badge.svg)]()
+[![codeql](https://github.com/cansin/next-with-workbox/actions/workflows/codeql-analysis.yml/badge.svg)]()
 [![size](https://img.shields.io/bundlephobia/minzip/next-with-workbox)](https://bundlephobia.com/result?p=next-with-workbox)
 [![dependencies](https://img.shields.io/librariesio/release/npm/next-with-workbox)](https://libraries.io/npm/next-with-workbox)
-[![build](https://img.shields.io/travis/com/cansin/next-with-workbox)](https://travis-ci.com/github/cansin/next-with-workbox)
 [![downloads](https://img.shields.io/npm/dm/next-with-workbox)](https://www.npmjs.com/package/next-with-workbox)
 [![license](https://img.shields.io/github/license/cansin/next-with-workbox)](https://github.com/cansin/next-with-workbox/blob/master/LICENSE)
 
