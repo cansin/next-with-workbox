@@ -1,6 +1,6 @@
 {
   "name": "next-with-workbox",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "private": false,
   "description": "Higher order Next.js configuration for generating a service worker",
   "keywords": [
